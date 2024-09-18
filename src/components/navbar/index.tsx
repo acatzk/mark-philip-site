@@ -8,7 +8,6 @@ import MessagesIcon from '~/components/icons/messages-icon'
 import Nav from './nav'
 import Menu from './menu'
 import Logo from '../logo'
-import { Button } from '../ui/button'
 
 const Navbar = (): JSX.Element => {
   const [header, setHeader] = useState<boolean>(false)
