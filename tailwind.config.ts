@@ -49,6 +49,13 @@ const config: Config = {
           '3': 'hsl(var(--chart-3))',
           '4': 'hsl(var(--chart-4))',
           '5': 'hsl(var(--chart-5))'
+        },
+        core: {
+          primary: '#ff8f26',
+          lighter: '#ffd7b2',
+          secondary: '#2a2c38',
+          foreground: '#7a7b7d',
+          neutral: '#3b44c4'
         }
       },
       borderRadius: {

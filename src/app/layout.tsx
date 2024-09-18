@@ -3,11 +3,12 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 
 import '~/styles/globals.css'
+import Navbar from '~/components/navbar'
 
 export const metadata: Metadata = {
-  title: 'Mark Philip Portfolio',
+  title: 'Mark Philip | Reliable Electrical Services for Homes & Businesses',
   description:
-    "I provide reliable electrical solutions for both residential and commercial properties. From repairs and upgrades to complex installations, my services prioritize safety and quality. Whether you're a homeowner or a business, I tailor my work to meet your needs, ensuring everything complies with local regulations and standards."
+    'Reliable electrical services for residential and commercial properties, specializing in repairs, upgrades, and complex installations. Ensuring safety, quality, and compliance for all your electrical needs, tailored to meet homeowner and business requirements.'
 }
 
 const inter = Inter({
@@ -23,7 +24,10 @@ type RootLayoutProps = {
 export default function RootLayout({ children }: Readonly<RootLayoutProps>) {
   return (
     <html lang="en" className={inter.className}>
-      <body>{children}</body>
+      <body className="relative h-[9999px] antialiased">
+        <Navbar />
+        <main>{children}</main>
+      </body>
     </html>
   )
 }
