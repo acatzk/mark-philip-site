@@ -10,7 +10,7 @@ export default function Home(): JSX.Element {
     <main className="mt-10">
       {/* Banner */}
       <article className="relative mx-auto max-w-7xl">
-        <section className="flex h-[320px] items-center justify-center bg-[url('/images/bg.png')] bg-cover text-white md:h-[500px] md:gap-8 lg:gap-16">
+        <section className="flex h-[320px] min-h-[320px] items-center justify-center bg-[url('/images/bg.webp')] bg-cover text-white md:h-[500px] md:gap-8 lg:gap-16">
           <div className="flex flex-col space-y-6 px-4 md:px-8">
             <div>
               <span className="text-sm uppercase md:text-lg">I will help you</span>
@@ -31,9 +31,9 @@ export default function Home(): JSX.Element {
               </Button>
             </div>
           </div>
-          <div>
+          <div className="select-none">
             <Image
-              src="/images/img1.png"
+              src="/images/img1.webp"
               width={400}
               height={800}
               className="scale-100 sm:scale-75 md:scale-100"
