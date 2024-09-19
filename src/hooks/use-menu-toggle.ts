@@ -6,6 +6,6 @@ type MenuToggle = {
 }
 
 export const useMenuToggle = create<MenuToggle>((set, get) => ({
-  isOpen: true,
+  isOpen: false,
   toggle: () => set({ isOpen: !get().isOpen })
 }))
