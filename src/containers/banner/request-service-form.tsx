@@ -1,6 +1,7 @@
 import React from 'react'
-import { Button } from '~/components/ui/button'
+
 import { Input } from '~/components/ui/input'
+import { Button } from '~/components/ui/button'
 
 const RequestServiceForm = (): JSX.Element => {
   return (
@@ -12,7 +13,7 @@ const RequestServiceForm = (): JSX.Element => {
         <Input placeholder="YOUR NAME" />
         <Input placeholder="YOUR EMAIL" />
         <Input placeholder="PHONE NUMBER" />
-        <Button className="rounded-none py-5 uppercase">Get Service</Button>
+        <Button className="rounded-none px-6 py-5 uppercase">Get Service</Button>
       </div>
     </form>
   )
