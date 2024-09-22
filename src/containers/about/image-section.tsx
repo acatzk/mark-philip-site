@@ -26,8 +26,8 @@ const ImageSection = (): JSX.Element => {
           alt="About profile"
         />
       </div>
-      <div className="absolute -bottom-8 -left-10 h-32 w-28 flex-1 border-[6px] border-[#FF8F26] bg-[#FFD8B2] text-core-secondary shadow-lg lg:-left-14 lg:h-44 lg:w-[140px]">
-        <div className="flex h-full flex-col items-center justify-center">
+      <div className="absolute -bottom-8 -left-10 h-32 w-28 flex-1 border-[6px] border-[#FF8F26] bg-[#FFD8B2] text-core-secondary shadow-lg lg:-left-14 lg:h-44 lg:w-[150px]">
+        <div className="flex h-full flex-col items-center justify-center p-2">
           <p className="text-center text-xs font-bold md:text-sm">
             <span className="text-base font-extrabold md:text-lg lg:text-xl">6 Years</span>{' '}
             Experienced of This Field
