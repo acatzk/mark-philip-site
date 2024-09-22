@@ -24,7 +24,7 @@ type RootLayoutProps = {
 export default function RootLayout({ children }: Readonly<RootLayoutProps>) {
   return (
     <html lang="en" className={inter.className}>
-      <body className="relative h-[9999px] scroll-smooth antialiased">
+      <body className="relative h-[9999px] scroll-smooth antialiased selection:bg-core-primary selection:text-white">
         <Navbar />
         {children}
       </body>
