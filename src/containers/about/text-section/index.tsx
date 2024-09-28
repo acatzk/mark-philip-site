@@ -27,7 +27,7 @@ const TextSection = (): JSX.Element => {
 }
 
 const SectionHeader = ({ title }: { title: string }): JSX.Element => (
-  <span className="text-sm font-bold uppercase md:text-base">{title}</span>
+  <h3 className="text-sm font-bold uppercase md:text-base">{title}</h3>
 )
 
 export default TextSection

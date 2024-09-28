@@ -8,7 +8,7 @@ import RequestServiceForm from './request-service-form'
 const Banner = (): JSX.Element => {
   return (
     <article className="relative mx-auto max-w-7xl">
-      <section className="flex h-[320px] min-h-[320px] items-center justify-center bg-[url('/images/bg.webp')] bg-cover text-white md:h-[500px] md:gap-8 lg:gap-16">
+      <section className="flex h-[320px] min-h-[320px] items-center justify-center bg-core-secondary bg-[url('/images/bg.webp')] bg-cover text-white md:h-[500px] md:gap-8 lg:gap-16">
         <div className="flex flex-col px-4">
           <div>
             <span className="text-sm uppercase md:text-lg">I will help you</span>
