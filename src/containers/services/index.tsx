@@ -8,16 +8,43 @@ import { skillsAndServicesData } from '~/constant/services'
 const Servcices = (): JSX.Element => {
   return (
     <article className="bg-[#f7f7f7]">
-      <section className="mx-auto max-w-7xl px-4 py-16 md:py-28 lg:py-40">
+      <section className="mx-auto max-w-7xl px-4 pt-16 md:pt-28 lg:pt-40">
         <header className="flex flex-col items-center justify-center space-y-2 md:space-y-4">
           <h3 className="text-sm font-bold uppercase text-core-primary md:text-base">Services</h3>
           <h2 className="text-2xl font-extrabold uppercase text-core-secondary lg:text-4xl">
             Skills and services
           </h2>
         </header>
-        <Swiper watchSlidesProgress={true} slidesPerView={3} spaceBetween={24} className="mt-20">
+        <Swiper
+          watchSlidesProgress={true}
+          slidesPerView={3}
+          spaceBetween={24}
+          speed={500}
+          breakpoints={{
+            320: {
+              slidesPerView: 1,
+              spaceBetween: 14
+            },
+            640: {
+              slidesPerView: 1,
+              spaceBetween: 14
+            },
+            768: {
+              slidesPerView: 2,
+              spaceBetween: 18
+            },
+            1024: {
+              slidesPerView: 3,
+              spaceBetween: 24
+            }
+          }}
+          className="mt-20"
+        >
           {skillsAndServicesData?.map((skill, index) => (
-            <SwiperSlide key={index} className="mb-4 h-full w-full bg-white p-5 pb-14 shadow">
+            <SwiperSlide
+              key={index}
+              className="mb-14 h-full w-full bg-white p-5 pb-14 shadow transition-all duration-500 ease-in-out hover:scale-125 hover:shadow-2xl"
+            >
               <div className="relative h-[200px] w-auto">
                 <Image
                   fill
@@ -30,16 +57,20 @@ const Servcices = (): JSX.Element => {
                   quality={100}
                   alt="Electrical Image"
                 />
-                <div className="absolute -bottom-8 right-8 inline-block bg-core-primary p-4">
-                  <skill.icon className="h-8 w-8 stroke-1 text-white" />
+                <div className="absolute -bottom-8 right-8 inline-block bg-core-primary p-3 md:p-4">
+                  <skill.icon className="h-5 w-5 stroke-1 text-white lg:h-8 lg:w-8" />
                 </div>
               </div>
               <div className={cn('mt-14 space-y-4', index === 0 ? 'pb-5' : '')}>
                 <div>
-                  <span className="font-medium uppercase text-core-primary">{skill.type}</span>
-                  <h3 className="text-2xl font-bold text-core-secondary">{skill.title}</h3>
+                  <span className="text-sm font-medium uppercase text-core-primary md:text-base">
+                    {skill.type}
+                  </span>
+                  <h3 className="text-base font-bold text-core-secondary md:text-xl lg:text-2xl">
+                    {skill.title}
+                  </h3>
                 </div>
-                <p className="text-sm text-[#7A7B7D]">{skill.description}</p>
+                <p className="text-xs text-[#7A7B7D] md:text-sm">{skill.description}</p>
               </div>
             </SwiperSlide>
           ))}
